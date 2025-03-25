@@ -1,45 +1,45 @@
-# CSE Simulator
+# Simulador CSE
 
-CSE Simulator is a web-based application designed to simulate circuit components and their interactions. Users can place components on a map, configure their properties, and visualize their behavior.
+El Simulador CSE es una aplicación web diseñada para simular componentes de circuitos y sus interacciones. Los usuarios pueden colocar componentes en un mapa, configurar sus propiedades y visualizar su comportamiento.
 
-## Features
+## Características
 
-- Interactive map for placing circuit components.
-- Configurable component properties (e.g., resistance, voltage).
-- Real-time updates to component values.
+- Mapa interactivo para colocar componentes de circuitos.
+- Propiedades configurables de los componentes (por ejemplo, resistencia, voltaje).
+- Actualizaciones en tiempo real de los valores de los componentes.
 
-## Technologies Used
+## Tecnologías Utilizadas
 
 - **Frontend**: React.js
-- **Styling**: Tailwind CSS
-- **Build Tool**: Vite
+- **Estilos**: Tailwind CSS
+- **Herramienta de Construcción**: Vite
 
-## Setup Instructions
+## Instrucciones de Configuración
 
-1. Clone the repository:
+1. Clona el repositorio:
    ```bash
-   git clone https://github.com/your-username/cse-simulator.git
+   git clone https://github.com/tu-usuario/cse-simulator.git
    cd cse-simulator
    ```
 
-2. Navigate to the frontend directory:
+2. Navega al directorio del frontend:
    ```bash
    cd frontend
    ```
 
-3. Install dependencies:
+3. Instala las dependencias:
    ```bash
-   npm install
+   pnpm install
    ```
 
-4. Start the development server:
+4. Inicia el servidor de desarrollo:
    ```bash
-   npm run dev
+   pnpm run dev
    ```
 
-5. Open your browser and navigate to `http://localhost:5173`.
+5. Abre tu navegador y navega a `http://localhost:5173`.
 
-## Project Structure
+## Estructura del Proyecto
 
 ```
 cse-simulator/
@@ -56,12 +56,12 @@ cse-simulator/
 └── README.md
 ```
 
-## Usage
+## Uso
 
-1. Select a component type using the `Select` menu.
-2. Click on the map to place the selected component.
-3. Adjust component values directly on the map.
+1. Selecciona un tipo de componente usando el menú `Select`.
+2. Haz clic en el mapa para colocar el componente seleccionado.
+3. Ajusta los valores de los componentes directamente en el mapa.
 
-## License
+## Licencia
 
-This project is licensed under the MIT License.
+Este proyecto está licenciado bajo la Licencia MIT.
