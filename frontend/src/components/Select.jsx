@@ -4,8 +4,7 @@ import { IconCircuitDiode, IconCircuitCellPlus, IconCircuitResistor, IconWaveSin
 
 const buttonStyle = "w-15 h-15 p-3 bg-gray-200 rounded-md hover:bg-gray-300 flex items-center justify-center";
 
-export default function Select() {
-    const [selectedButton, setSelectedButton] = useState(null);
+export default function Select({ selectedButton, setSelectedButton }) {
 
     const handleButtonClick = (button) => {
         setSelectedButton(button);

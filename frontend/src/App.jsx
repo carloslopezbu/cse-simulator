@@ -1,17 +1,10 @@
-import { useState } from 'react'
-import './App.css'
+import React from "react";
+import Simulator from "./components/Simulator";
 
-import Map from './components/Map'
-import Select from './components/Select'
-
-function App() {
-
-  return (
-    <>
-    <Map/>
-    <Select/>
-    </>
-  )
+export default function App() {
+    return (
+        <div className="w-screen h-screen">
+            <Simulator />
+        </div>
+    );
 }
-
-export default App
