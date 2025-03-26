@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { IconCircuitDiode, IconCircuitCellPlus, IconCircuitResistor, IconWaveSine } from "@tabler/icons-react";
 
-const EComponentsIcons = {
+export const EComponentsIcons = {
     diode: IconCircuitDiode,
     battery: IconCircuitCellPlus,
     resistor: IconCircuitResistor,
@@ -11,7 +11,7 @@ const EComponentsIcons = {
 const EComponentMeasures = {
     battery: "V",
     resistor: "Ω",
-    sine: "V",
+    sine: "Hz",
     diode: "",
 };
 
@@ -35,11 +35,10 @@ const ElectricComponents = React.memo(function ElectricComponents({ type, value,
     return (
         <div
             className="absolute flex flex-col items-center"
-            style={{ left: x, top: y, transform: "translate(-50%, -50%)" }}
-        >
+            style={{ left: x, top: y, transform: "translate(-50%, -50%)" }}>
             <Icon size={40} />
             
-            {type !== "diode" && (
+            {(type !== "diode") && (
                 <input
                     type="number"
                     className="text-sm max-w-12 mt-1 text-center border border-gray-300 rounded"
