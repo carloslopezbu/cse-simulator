@@ -3,11 +3,11 @@ import { useState } from 'react'
 export default function Login() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [remenberMe, setRemenberMe] = useState(false)
+    const [rememberMe, setRememberMe] = useState(false)
 
     const signIn = (e) => {
         e.preventDefault()
-        console.log("VAMOOOS", { email, password, remenberMe })
+        console.log("VAMOOOS", { email, password, rememberMe })
         // Aquí va tu lógica de autenticación
     }
 
@@ -51,8 +51,7 @@ export default function Login() {
                                 id="remember" 
                                 aria-describedby="remember" 
                                 type="checkbox" 
-                                onChange={(e) => setRemenberMe(e.target.checked)}
-                                required
+                                onChange={(e) => setRememberMe(e.target.checked)}
                             />
                           </div>
                           <div className="ml-3 text-sm">
