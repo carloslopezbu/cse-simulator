@@ -3,10 +3,11 @@ import { useState } from 'react'
 export default function Login() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [remenberMe, setRemenberMe] = useState(false)
 
     const signIn = (e) => {
         e.preventDefault()
-        console.log("VAMOOOS", { email, password })
+        console.log("VAMOOOS", { email, password, remenberMe })
         // Aquí va tu lógica de autenticación
     }
 
@@ -21,6 +22,8 @@ export default function Login() {
                             type="email" 
                             id="email" 
                             value={email}
+                            autoComplete='username'
+                            placeholder='example@email.com'
                             onChange={(e) => setEmail(e.target.value)}
                             className='ring-2 ring-emerald-500 rounded-md p-2 w-full focus:ring-emerald-600 transition-normal ease-in-out duration-300'
                             required
@@ -33,17 +36,39 @@ export default function Login() {
                             type="password" 
                             id="password" 
                             value={password}
+                            autoComplete='new-password'
+                            placeholder='···········'
                             onChange={(e) => setPassword(e.target.value)}
                             className='border-2 border-emerald-500 rounded-md p-2 w-full focus:ring-emerald-600 transition-normal ease-in-out duration-300'
                             required
                         />
                     </div>
 
-                    <a href="/forgot" className='text-emerald-600 hover:text-emerald-400 transition-normal ease-in-out duration-300'>¿Olvidaste tu constraseña?</a>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-start">
+                          <div className="flex items-center h-5">
+                            <input 
+                                id="remember" 
+                                aria-describedby="remember" 
+                                type="checkbox" 
+                                onChange={(e) => setRemenberMe(e.target.checked)}
+                                required
+                            />
+                          </div>
+                          <div className="ml-3 text-sm">
+                            <label htmlFor="remember" className="text-gray-500 dark:text-gray-300">Recuerdame</label>
+                          </div>
+                      </div>
+                      <a href="/forgot" className="text-sm ml-20 text-emerald-600 hover:text-emerald-400 transition-normal ease-in-out duration-300">¿Olvidaste la contraseña?</a>
+                  </div>
 
-                    <button type="submit" className='mt-4 bg-emerald-600 text-white px-4 py-2 rounded-md hover:bg-emerald-500 transition-normal ease-in-out duration-300'>
+                    <button type="submit" className='mt-2 bg-emerald-600 text-white px-4 py-2 rounded-md hover:bg-emerald-500 transition-normal ease-in-out duration-300'>
                         Iniciar sesión
                     </button>
+
+                    <div className='text-sm'>
+                        ¿No tienes cuenta aún? <a href="/register" className='text-emerald-600 hover:text-emerald-400 transition-normal ease-in-out duration-300'>Registrate</a>
+                    </div>
                 </form>
             </div>
         </section>
